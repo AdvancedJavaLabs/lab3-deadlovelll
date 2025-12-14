@@ -42,7 +42,7 @@ public class SalesMapper
         if (quantity == 0) return;
 
         category.set(cat);
-        revenueAndQty.set(price * quantity + "," + quantity);
+        revenueAndQty.set((price * quantity) + "," + quantity + "," + price);
         context.write(category, revenueAndQty);
     }
 }
